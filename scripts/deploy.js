@@ -1,15 +1,4 @@
 const hre = require('hardhat');
-const ethers = hre.ethers;
-const upgrades = hre.upgrades;
-const chai = require("chai");
-const fs = require("fs");
-const path = require("path");
-const { solidity } = require("ethereum-waffle");
-const { expect } = chai;
-const { BigNumber, logger } = require("ethers");
-const network = hre.hardhatArguments.network;
-
-chai.use(solidity);
 async function main () {
     let nft = await hre.ethers.getContractFactory('IdeoNft');
     nft = await nft.deploy();
